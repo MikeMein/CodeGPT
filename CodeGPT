@@ -1,0 +1,18 @@
+# Script from a .bashrc file used to try out CodeGPT extension
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# Trying out simple logical operators on the command line
+[[ -d GitHub ]] || mkdir ~/Github
+
+# Simple if/then script version of previos command 
+if [ ! -d GitHub ]; then
+    mkdir ~/Github
+else
+    print "directory exists"
+fi
